@@ -1,0 +1,20 @@
+group 'ru.innopolis'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.0.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version: '4.3.0.RELEASE'
+
+    compile group: 'org.springframework', name: 'spring-remoting', version: '2.0.8'
+
+    compile project(':common')
+}
